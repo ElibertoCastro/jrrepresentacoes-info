@@ -1,0 +1,38 @@
+header {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo {
+    text-decoration: none;
+    color: #f85a40;
+}
+
+nav {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.menu {
+    display: flex;    
+}
+
+li {
+    display: inline;
+    justify-content: space-around;
+}
+
+a {
+    display: block;
+    padding: 16px;
+    text-decoration: none;
+  }
