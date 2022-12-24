@@ -1,62 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,300;1,400&display=swap');
 
-* {
-    box-sizing: border-box;
-}
 
 body {
     color: #333;
     font-family: 'Poppins', sans-serif;
     margin-left: auto;
     margin-right: auto;
+    font-size: 16px;
 }
 
-header {
+.cabecalho {
     align-items: center;
     background-color: #FEFEFE;
-    color: #222;
-    display: flexbox;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 10%;
+    display: flex;
+    height: 6em;
+    justify-content: space-around;
     position: sticky;
     top: 0;
 }
 
-.container {
-    align-items: center;
-    display: flex;
-    height: 150px;
-    justify-content: space-between;
+.cabecalho .logo {
+    width: 18em;
 }
 
-.container .logo {
-    margin: 0px;
-    width: 350px;
-}
-
-.container img {
+.cabecalho img {
     width: 100%;
 }
 
-ul {
+
+.menu {
     list-style-type: none;
     display: flex;
     justify-content: space-between;
 	text-align: center;
 }
 
-li a {
+.menu-item a {
     align-items: center;
+    color:#083869;
     display: flex;
-    font-size: 18px;
-    padding: 10px 0 10px 28px;
+    font-size: 1em;
+    padding: 1em 0 1em 2em;
     text-align: center;
     text-decoration: none;
     transition: color, transform .7s;
 }
 
-li a:hover {
+.menu-item a:hover {
     color: #f85a40;
     transform: scale(1.1);
 }
@@ -65,53 +55,46 @@ li a:hover {
     align-items: center;
     background-image: radial-gradient( #d1d1d1 0%, #ffffff 100%); 
     display: flex;
-    height: 500px;
+    height: 40em;
     justify-content: center;
     text-align: center;
     width: 100%;
 }
 
-#inicio h2 {
+#inicio h1 {
     color: #f85a40;
     text-transform: uppercase;
-    font-size: 60px;
-    padding-bottom: 16px;
-    margin-bottom: 24px;
+    font-size: 5em;
+    padding-bottom: 1em;
     font-weight: 300;
 }
 
-#inicio h3 {
+#inicio h2 {
     color:#083869;
     font-weight: 300;
-    font-size: 32px;
-
+    font-size: 3em;
+    
 }
 
 #inicio p {
-    padding-bottom: 8px;
-    font-size: 16px;
+    font-size: 1.3em;
     color: #555;
 }
 
-section {
-    margin: 50px 0;
-}
-
-section h2 {
-    padding-bottom: 50px;
-}
-
-section p {
-    padding-bottom: 20px;
-    line-height: 28px;
-}
-
 #quem-somos, #parceiros, #contato {
+    padding-top: 7em;
     width: 70%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 
+.titulo-conteudo {
+    padding-bottom: 2em;
+}
+
+#quem-somos p {
+    font-size: 1.2em;
+    line-height: 2.5em;
+}
 
 .cards {
     display: inline;
@@ -120,9 +103,9 @@ section p {
 }
 
 .cards img {
-    width: 150px;
-    padding: 16px;
-    margin: 8px;
+    width: 8em;
+    padding: 1em;
+    margin: 0.5em;
     transition: transform 1s;
 }
 
@@ -134,54 +117,98 @@ section p {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 0;
+    margin-bottom: 2em;
 }
 
-.contatos div {
-    padding-right: 24px;
-    width: 33%;
-}
-
-h4 {
-    padding: 12px 8px;
-}
+.telefone,
+.whatsapp,
+.email,
+.endereco {
+    padding-bottom: 1.5em;
+} 
 
 .wrapper {
     display: flex;
     align-items: center;
 }
-
-.wrapper img {
+.wrapper-imagem {
     height: 25px;
+}
+.wrapper-titulo {
+    padding: 12px 8px;
+}
+
+iframe {
+    padding: 1.5em 0;
+    width: 100%; 
+    height: 20em;
 }
 
 hr {
-    border-top: 6px solid #f85a40;
-    margin-bottom: 3px;
+    border-top: 0.5em solid #f85a40;
+    margin-bottom: 0.3em;
 }
 
 footer {
     background-color: #083869;
     color: #FEFEFE;
     text-align: center;
-    padding: 32px;
-    font-size: small;
-    font-size: smaller;
+    padding: 2em;
+    font-size: 0.8em;
 }
 
 footer p {
-    line-height: 18px;
+    line-height: 1.5em;
 }
 
-@media screen and (max-width: 800px) {
-    .container {
+@media (max-width: 500px) {
+    body {
+        font-size: 12px;
+    }
+    .cabecalho {
         display: block;
-        margin: 1em 2em;
-        height: inherit;
+        height: 12em;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .menu a {
+        padding: 1em;
+    }
+
+    #inicio {
+        height: 30em;
+    }
+
+    #inicio h1 {
+        font-size: 2.8em;
+        padding-bottom: 1em;
+    }
+    
+    #inicio h2 {
+        font-size: 1.8em;
+        
+    }
+    
+    #inicio p {
+        font-size: 1.3em;
+        color: #333;
+    } 
+
+    #quem-somos, #parceiros, #contato {
+        padding-top: 13em;
+        width: 90%;
     }
 
     .cards img {
-        padding: 6px;
-        margin: 6px;
+        width: 10em;
+        margin-left: 0.5em;
+    }
+
+    .cards img:hover {
+        transform: none;
     }
 }
